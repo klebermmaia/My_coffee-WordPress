@@ -1,1 +1,1 @@
-# My coffee WordPress
+# My coffee - WordPress
