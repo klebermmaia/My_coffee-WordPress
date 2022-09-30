@@ -1,0 +1,101 @@
+[30-Sep-2022 14:30:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\script-loader.php on line 2781
+[30-Sep-2022 14:30:59 UTC] PHP Stack trace:
+[30-Sep-2022 14:30:59 UTC] PHP   1. {main}() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\index.php:0
+[30-Sep-2022 14:30:59 UTC] PHP   2. require() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\index.php:17
+[30-Sep-2022 14:30:59 UTC] PHP   3. require_once() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-blog-header.php:19
+[30-Sep-2022 14:30:59 UTC] PHP   4. include() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\template-loader.php:106
+[30-Sep-2022 14:30:59 UTC] PHP   5. get_footer() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\page-home.php:63
+[30-Sep-2022 14:30:59 UTC] PHP   6. locate_template() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\general-template.php:92
+[30-Sep-2022 14:30:59 UTC] PHP   7. load_template() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\template.php:716
+[30-Sep-2022 14:30:59 UTC] PHP   8. require_once() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\template.php:770
+[30-Sep-2022 14:30:59 UTC] PHP   9. wp_footer() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\footer.php:14
+[30-Sep-2022 14:30:59 UTC] PHP  10. do_action() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\general-template.php:3058
+[30-Sep-2022 14:30:59 UTC] PHP  11. WP_Hook->do_action() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\plugin.php:476
+[30-Sep-2022 14:30:59 UTC] PHP  12. WP_Hook->apply_filters() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php:331
+[30-Sep-2022 14:30:59 UTC] PHP  13. wp_maybe_inline_styles() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php:307
+[30-Sep-2022 18:15:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_filed() in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\page-contato.php:8
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kleber...')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\index.php(17): require('C:\\Users\\Kleber...')
+#3 {main}
+  thrown in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\page-contato.php on line 8
+[30-Sep-2022 18:16:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_filed() in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\page-contato.php:8
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kleber...')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\index.php(17): require('C:\\Users\\Kleber...')
+#3 {main}
+  thrown in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\page-contato.php on line 8
+[30-Sep-2022 19:01:26 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php on line 170
+[30-Sep-2022 19:03:26 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CMB2::add_group_field(), 1 passed in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php on line 170 and at least 2 expected in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php:1521
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php(170): CMB2->add_group_field(Array)
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(307): cmb2_fields_contato('')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\bootstrap.php(26): do_action('cmb2_admin_init')
+#5 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\w in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php on line 1521
+[30-Sep-2022 19:05:06 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\page-contato.php on line 20
+[30-Sep-2022 19:05:26 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CMB2::add_group_field(), 1 passed in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php on line 170 and at least 2 expected in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php:1521
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php(170): CMB2->add_group_field(Array)
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(307): cmb2_fields_contato('')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\bootstrap.php(26): do_action('cmb2_admin_init')
+#5 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\w in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php on line 1521
+[30-Sep-2022 19:07:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\page-contato.php on line 20
+[30-Sep-2022 19:07:56 UTC] PHP Stack trace:
+[30-Sep-2022 19:07:56 UTC] PHP   1. {main}() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\index.php:0
+[30-Sep-2022 19:07:56 UTC] PHP   2. require() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\index.php:17
+[30-Sep-2022 19:07:56 UTC] PHP   3. require_once() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-blog-header.php:19
+[30-Sep-2022 19:07:56 UTC] PHP   4. include() C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\template-loader.php:106
+[30-Sep-2022 19:07:59 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CMB2::add_group_field(), 1 passed in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php on line 170 and at least 2 expected in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php:1521
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php(170): CMB2->add_group_field(Array)
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(307): cmb2_fields_contato('')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\bootstrap.php(26): do_action('cmb2_admin_init')
+#5 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\w in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php on line 1521
+[30-Sep-2022 19:08:00 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CMB2::add_group_field(), 1 passed in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php on line 170 and at least 2 expected in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php:1521
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php(170): CMB2->add_group_field(Array)
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(307): cmb2_fields_contato('')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\bootstrap.php(26): do_action('cmb2_admin_init')
+#5 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\w in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php on line 1521
+[30-Sep-2022 19:08:01 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CMB2::add_group_field(), 1 passed in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php on line 170 and at least 2 expected in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php:1521
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php(170): CMB2->add_group_field(Array)
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(307): cmb2_fields_contato('')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\bootstrap.php(26): do_action('cmb2_admin_init')
+#5 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\w in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php on line 1521
+[30-Sep-2022 19:08:27 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CMB2::add_group_field(), 1 passed in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php on line 170 and at least 2 expected in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php:1521
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php(170): CMB2->add_group_field(Array)
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(307): cmb2_fields_contato('')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\bootstrap.php(26): do_action('cmb2_admin_init')
+#5 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\w in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php on line 1521
+[30-Sep-2022 19:08:30 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CMB2::add_group_field(), 1 passed in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php on line 170 and at least 2 expected in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php:1521
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php(170): CMB2->add_group_field(Array)
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(307): cmb2_fields_contato('')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\bootstrap.php(26): do_action('cmb2_admin_init')
+#5 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\w in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php on line 1521
+[30-Sep-2022 19:08:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CMB2::add_group_field(), 1 passed in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php on line 170 and at least 2 expected in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php:1521
+Stack trace:
+#0 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\themes\my_coffee\functions.php(170): CMB2->add_group_field(Array)
+#1 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(307): cmb2_fields_contato('')
+#2 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\bootstrap.php(26): do_action('cmb2_admin_init')
+#5 C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\w in C:\Users\Kleber\Desktop\WP-testes\mycoffee\app\public\wp-content\plugins\cmb2\includes\CMB2.php on line 1521
