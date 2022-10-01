@@ -5,7 +5,8 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
-		<title><?php bloginfo('name'); ?></title>
+		<meta name="description" content="<?php bloginfo('name'); ?> - <?php wp_title('titulo-seo'); ?> <?php the_field('descricao-seo'); ?>">
+		<title><?php bloginfo('name'); ?> | <?php wp_title(''); ?> - <?php the_field('titulo-seo'); ?></title>
 
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+SC' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
@@ -16,11 +17,13 @@
 		
 		<header>
 			<nav>
-				<ul>
-					<li class="current_page_item"><a href="/">Menu</a></li>
-					<li><a href="/sobre/">Sobre</a></li>
-					<li><a href="/contato/">Contato</a></li>
-				</ul>
+				<?php
+					$args = array(
+						'menu' => 'principal',
+						'container' => false
+					);
+					wp_nav_menu( $args );
+				?>
 			</nav>
 
 			<h1><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/my-coffee.png" alt="Rest"></h1>

@@ -14,16 +14,26 @@
 			<h2>História</h2>
 			<?php 
 				$historia = get_field('historia');
-				if(isset($historia)){ foreach($historia as $paragrafo){
+				if ( isset($historia ) ) { foreach ( $historia as $paragrafo ){
 			?>
-				<p><?php $paragrafo['paragrafo'] ?></p>
+				<p><?php echo $paragrafo['paragrafo']; ?></p>
 			<?php } } ?>
-			<p>O incentivo ao avanço tecnológico, assim como a mobilidade dos capitais internacionais auxilia a preparação e a composição dos níveis de motivação departamental.</p>
-			<p>Gostaria de enfatizar que o desenvolvimento contínuo de distintas formas de atuação prepara-nos para enfrentar situações atípicas decorrentes do remanejamento dos quadros funcionais.</p>
+
 			<h2>Visão</h2>
-			<p>Não obstante, a expansão dos mercados mundiais faz parte de um processo de gerenciamento de alternativas às soluções ortodoxas.</p>
+			<?php 
+				$visao = get_field('visao');
+				if ( isset($visao ) ) { foreach ( $visao as $paragrafo ){
+			?>
+				<p><?php echo $paragrafo['paragrafo']; ?></p>
+			<?php } } ?>
+
 			<h2>Valores</h2>
-			<p>O empenho em analisar a consolidação das estruturas apresenta tendências no sentido de aprovar a manutenção dos índices pretendidos.</p>
+			<?php 
+				$valores = get_field('valores');
+				if ( isset($valores ) ) { foreach ( $valores as $paragrafo ){
+			?>
+				<p><?php echo $paragrafo['paragrafo']; ?></p>
+			<?php } } ?>
 		</div>
 	</section>
 

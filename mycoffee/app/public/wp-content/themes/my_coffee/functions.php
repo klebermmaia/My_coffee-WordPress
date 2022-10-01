@@ -8,6 +8,25 @@ function the_field($key, $page_id = 0) {
 	echo get_field($key, $page_id);
 }
 
+add_action('cmb2_admin_init', 'cmb2_fields_seo');
+function cmb2_fields_seo() {
+	$cmb = new_cmb2_box([
+		'id' => 'seo_box',
+		'title' => 'Pagina SEO',
+		'object_types' => ['page','post'],
+	]);
+    $cmb->add_field([
+        'name' => 'Titulo SEO',
+        'id' => 'titulo-seo',
+        'type' => 'text',
+    ]);
+    $cmb->add_field([
+        'name' => 'Descrição SEO',
+        'id' => 'descricao-seo',
+        'type' => 'text',
+    ]);
+}
+
 add_action('cmb2_admin_init', 'cmb2_fields_home');
 function cmb2_fields_home() {
 	$cmb = new_cmb2_box([
@@ -226,43 +245,66 @@ function cmb2_fields_sobre() {
             'url'=> false,
         ],
     ]);
-
-    $cmb->add_field([
-        'name' => 'Historia',
-        'id' => 'historia',
+    $historia = $cmb->add_field([
+        	'name' => 'Historia',
+        	'id' => 'historia',
+        	'type' => 'group',
+        	'repeatable' => true,
+        	'options' => [
+			'group_title' => 'paragrafo - {#}',
+			'add_button' => 'Adicionar',
+			'remove_button' => 'Remover',
+			'sortable' => true,
+		]
+	]);
+    
+    $cmb->add_group_field($historia, [
+        'name' => 'Paragrafo',
+        'id' => 'paragrafo',
         'type' => 'textarea',
     ]);
-    // $horarios = $cmb->add_field([
-	// 	'name' => 'Horarios de funcionamento',
-	// 	'id' => 'horarios',
-	// 	'type' => 'group',
-	// 	'repeatable' => true,
-	// 	'options' => [
-	// 		'group_title' => 'Horario - {#}',
-	// 		'add_button' => 'Adicionar',
-	// 		'remove_button' => 'Remover',
-	// 		'sortable' => true,
-	// 	]
-	// ]);
+
+    $visao = $cmb->add_field([
+        'name' => 'Visão',
+        'id' => 'visao',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => [
+        'group_title' => 'paragrafo - {#}',
+        'add_button' => 'Adicionar',
+        'remove_button' => 'Remover',
+        'sortable' => true,
+        ]
+    ]);
+
+    $cmb->add_group_field($visao, [
+        'name' => 'Paragrafo',
+        'id' => 'paragrafo',
+        'type' => 'textarea',
+    ]);
+
+    $valores = $cmb->add_field([
+        'name' => 'Valores',
+        'id' => 'valores',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => [
+        'group_title' => 'paragrafo - {#}',
+        'add_button' => 'Adicionar',
+        'remove_button' => 'Remover',
+        'sortable' => true,
+        ]
+    ]);
+
+    $cmb->add_group_field($valores, [
+        'name' => 'Paragrafo',
+        'id' => 'paragrafo',
+        'type' => 'textarea',
+    ]);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Funções para Limpar o Header
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'start_post_rel_link', 10, 0 );
@@ -273,4 +315,7 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
+
+// Habilitar Menus
+add_theme_support('menus');
 ?>

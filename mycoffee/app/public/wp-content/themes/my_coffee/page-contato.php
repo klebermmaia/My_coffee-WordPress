@@ -27,7 +27,7 @@
 			<h2>Horários</h2>
 			<?php 
 				$horarios = get_field('horarios');
-				if (isset($horarios)){ foreach($horarios as $item){
+				if (isset( $horarios ) ) { foreach( $horarios as $item ){
 			?>
 				<p><?php echo $item['horario']; ?></p>
 			<?php } } ?>

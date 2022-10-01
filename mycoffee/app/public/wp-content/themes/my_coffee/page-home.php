@@ -6,7 +6,7 @@
 	<section class="container">
 		<h2 class="subtitulo"><?php the_field('title-page') ?></h2>
 
-		<div class="menu-item grid-8">
+		<div class="item-menu grid-8">
 			<h2><?php the_field('titulo-menu-left') ?></h2>
 			<ul>
 				<?php
@@ -24,7 +24,7 @@
 			</ul>
 		</div>
 
-		<div class="menu-item grid-8">
+		<div class="item-menu grid-8">
 		<h2><?php the_field('titulo-menu-right') ?></h2>
 			<ul>
 				<?php
