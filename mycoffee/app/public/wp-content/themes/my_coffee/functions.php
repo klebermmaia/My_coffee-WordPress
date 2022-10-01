@@ -150,8 +150,13 @@ function cmb2_fields_contato() {
         'type' => 'text_email',
     ]);
     $cmb->add_field([
-        'name' => 'Telefone',
-        'id' => 'telefone',
+        'name' => 'Rua - Endereço',
+        'id' => 'rua',
+        'type' => 'text',
+    ]);
+    $cmb->add_field([
+        'name' => 'Cidade - Endereço',
+        'id' => 'cidade',
         'type' => 'text',
     ]);
     $redesSociais = $cmb->add_field([
@@ -167,18 +172,79 @@ function cmb2_fields_contato() {
 		]
 	]);
     $cmb->add_group_field($redesSociais, [
-        'nome' => 'Nome da rede social',
+        'name' => 'Nome da rede social',
         'id' => 'nome-rede-social',
         'type' => 'text',
     ]);
     $cmb->add_group_field($redesSociais, [
-        'nome' => 'URL da rede social',
+        'name' => 'URL da rede social',
         'id' => 'url-rede-social',
         'type' => 'text_url',
     ]);
+
+    $horarios = $cmb->add_field([
+		'name' => 'Horarios de funcionamento',
+		'id' => 'horarios',
+		'type' => 'group',
+		'repeatable' => true,
+		'options' => [
+			'group_title' => 'Horario - {#}',
+			'add_button' => 'Adicionar',
+			'remove_button' => 'Remover',
+			'sortable' => true,
+		]
+	]);
+    $cmb->add_group_field($horarios, [
+        'name' => 'Horario',
+        'id' => 'horario',
+        'type' => 'text',
+    ]);
 }
 
+add_action('cmb2_admin_init', 'cmb2_fields_sobre');
+function cmb2_fields_sobre() {
+	$cmb = new_cmb2_box([
+		'id' => 'sobre_box',
+		'title' => 'Pagina Sobre',
+		'object_types' => ['page'],
+		'show_on' => [
+			'key' => 'page-template',
+			'value' => 'page-sobre.php',
+		],
+	]);
+    $cmb->add_field([
+        'name' => 'Titulo da pagina',
+        'id' => 'title-page',
+        'type' => 'text',
+    ]);
 
+    $cmb->add_field([
+        'name' => 'Imagem da fachada',
+        'id' => 'img-fachada',
+        'type' => 'file',
+        'options'=>[
+            'url'=> false,
+        ],
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Historia',
+        'id' => 'historia',
+        'type' => 'textarea',
+    ]);
+    // $horarios = $cmb->add_field([
+	// 	'name' => 'Horarios de funcionamento',
+	// 	'id' => 'horarios',
+	// 	'type' => 'group',
+	// 	'repeatable' => true,
+	// 	'options' => [
+	// 		'group_title' => 'Horario - {#}',
+	// 		'add_button' => 'Adicionar',
+	// 		'remove_button' => 'Remover',
+	// 		'sortable' => true,
+	// 	]
+	// ]);
+}
 
 
 

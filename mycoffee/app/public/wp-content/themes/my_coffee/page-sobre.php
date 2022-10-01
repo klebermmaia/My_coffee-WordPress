@@ -4,14 +4,20 @@
 <?php get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<section class="container sobre">
-		<h2 class="subtitulo">Sobre</h2>
+		<h2 class="subtitulo"><?php the_field('title-page'); ?></h2>
 
 		<div class="grid-8">
-			<img src="img/rest-fachada.jpg" alt="Fachada do Rest">
+			<img src="<?php the_field('img-fachada') ?>" alt="Fachada do Rest">
 		</div>
 
 		<div class="grid-8">
 			<h2>História</h2>
+			<?php 
+				$historia = get_field('historia');
+				if(isset($historia)){ foreach($historia as $paragrafo){
+			?>
+				<p><?php $paragrafo['paragrafo'] ?></p>
+			<?php } } ?>
 			<p>O incentivo ao avanço tecnológico, assim como a mobilidade dos capitais internacionais auxilia a preparação e a composição dos níveis de motivação departamental.</p>
 			<p>Gostaria de enfatizar que o desenvolvimento contínuo de distintas formas de atuação prepara-nos para enfrentar situações atípicas decorrentes do remanejamento dos quadros funcionais.</p>
 			<h2>Visão</h2>

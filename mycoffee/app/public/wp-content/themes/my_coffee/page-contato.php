@@ -13,27 +13,29 @@
 
 		<div class="grid-1-3 contato-item">
 			<h2>Dados</h2>
-			<p>21 2422-9999</p>
-			<p>contato@rest.com</p>
+			<p><?php the_field('telefone'); ?></p>
+			<p><?php the_field('email'); ?></p>
 			<?php 
 				$redes = get_field('redes-sociais');
 				if (isset($redes) ) { foreach ( $redes as $item ) {
 			?>
-				<p><a href="<?php echo $item['url-rede-social']; ?>"><?php echo $item['nome-rede-social']; ?></a></p>
+				<p><a href="<?php echo $item['url-rede-social']; ?>" target="_blank"><?php echo $item['nome-rede-social']; ?></a></p>
 			<?php } } ?>
 			
 		</div>
 		<div class="grid-1-3 contato-item">
 			<h2>Horários</h2>
-			<p>Segunda à Sexta: 10 às 23</p>
-			<p>Sábado: 14 às 23</p>
-			<p>Domingo: 14 às 22</p>
+			<?php 
+				$horarios = get_field('horarios');
+				if (isset($horarios)){ foreach($horarios as $item){
+			?>
+				<p><?php echo $item['horario']; ?></p>
+			<?php } } ?>
 		</div>
 		<div class="grid-1-3 contato-item">
 			<h2>Endereço</h2>
-			<p>Rua Marechal, 29</p>
-			<p>Copacabana - Rio de Janeiro</p>
-			<p>Brasil - Terra - Via Láctea</p>
+			<p><?php the_field('rua'); ?></p>
+			<p><?php the_field('cidade'); ?></p>
 		</div>
 	</section>
 
